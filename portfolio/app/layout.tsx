@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Montserrat, Geist_Mono } from "next/font/google";
+import { Montserrat, Geist_Mono, Uncial_Antiqua } from "next/font/google";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -14,6 +14,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const uncialAntiqua = Uncial_Antiqua({
+  variable: "--font-uncial-antiqua",
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export default function RootLayout({
   children,
@@ -24,7 +29,7 @@ export default function RootLayout({
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "projects", "contact"];
+      const sections = ["home", "projects", "bio"];
       const scrollPosition = window.scrollY + window.innerHeight / 2;
 
       for (const section of sections) {
@@ -52,25 +57,26 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="fixed top-0 left-0 right-0 p-4 bg-[var(--header-color)] text-white text-center z-50">
-          <nav className="mt-2">
-            <a href="#home" onClick={() => handleClick("home")} className={`mx-2 hover:underline ${currentSection === "home" ? "text-[var(--secondary-color)]" : ""}`}>Home</a>
-            <a href="#about" onClick={() => handleClick("about")} className={`mx-2 hover:underline ${currentSection === "about" ? "text-[var(--secondary-color)]" : ""}`}>About</a>
-            <a href="#projects" onClick={() => handleClick("projects")} className={`mx-2 hover:underline ${currentSection === "projects" ? "text-[var(--secondary-color)]" : ""}`}>Projects</a>
-            <a href="#contact" onClick={() => handleClick("contact")} className={`mx-2 hover:underline ${currentSection === "contact" ? "text-[var(--secondary-color)]" : ""}`}>Contact</a>
+        <header className="fixed top-0 font-medium left-0 right-0 p-4 bg-[var(--header-color)] text-black flex items-center justify-between z-50">
+          <div className="absolute left-1/2 transform -translate-x-1/2">
+            <h1 className="text-6xl">oa</h1>
+          </div>
+          <nav className="mt-2 flex ml-auto">
+            <a href="#projects" onClick={() => handleClick("projects")} className={`mx-2 hover:underline ${currentSection === "work" ? "text-[var(--secondary-color)]" : ""}`}>PROJECTS</a>
+            <a href="#bio" onClick={() => handleClick("bio")} className={`mx-2 hover:underline ${currentSection === "bio" ? "text-[var(--secondary-color)]" : ""}`}>BIO</a>
           </nav>
         </header>
-        <main className="flex-grow pt-16">{children}</main>
-        <footer className="p-4 bg-gray-800 text-white text-center w-full">
-            <div className="mt-2">
+        <main className="flex-grow">{children}</main>
+        <footer className="p-4 bg-[var(--header-color)] text-white text-center w-full">
+          <div className="mt-2">
             <a href="https://www.linkedin.com/in/oskarandre/" target="_blank">
               <img src="/linkedin.svg" alt="LinkedIn" className="inline-block w-10 mr-5" />
             </a>
             <a href="https://github.com/oskarandre/" target="_blank">
               <img src="/github.svg" alt="GitHub" className="inline-block w-10" />
             </a>
-            </div>
-          <p className="text-xs mt-2">OSKAR ANDRÈ &copy;2025</p>
+          </div>
+          <p className="text-xs text-black mt-2">OSKAR ANDRÈ &copy;2025</p>
         </footer>
       </body>
     </html>

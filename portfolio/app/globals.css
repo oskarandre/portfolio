@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #000321;
+  --background: #000321;
+  --foreground: #D0C8BD;
   --primary-color: #4472CA;
   --secondary-color: #F03A47;
   --header-color: #00053D;
@@ -12,11 +12,17 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #000321;
+    /* --background: #000321;
     --foreground: #FFFFFF;
     --primary-color: #4472CA;
     --secondary-color: #F03A47;
-    --header-color: #00053D;
+    --header-color: #00053D; */
+
+    --background: #FFFFFF;
+    --foreground: #000321;
+    --primary-color: #4472CA;
+    --secondary-color: #F03A47;
+    --header-color: #00053d00;
   }
 }
 
@@ -41,6 +47,13 @@ main {
 header {
   background-color: var(--header-color);
   color: var(--background);
+
+}
+
+header h1 {
+  font-family: "Uncial Antiqua", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 footer {
