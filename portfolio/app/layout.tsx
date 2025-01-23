@@ -59,7 +59,7 @@ export default function RootLayout({
       >
         <header className="fixed top-0 font-medium left-0 right-0 p-4 bg-[var(--header-color)] text-black flex items-center justify-between z-50">
           <div className="absolute left-1/2 transform -translate-x-1/2">
-            <h1 className="text-6xl">oa</h1>
+            <h1 className={`text-6xl ${uncialAntiqua.variable}`}>oa</h1>
           </div>
           <nav className="mt-2 flex ml-auto">
             <a href="#projects" onClick={() => handleClick("projects")} className={`mx-2 hover:underline ${currentSection === "work" ? "text-[var(--secondary-color)]" : ""}`}>PROJECTS</a>
