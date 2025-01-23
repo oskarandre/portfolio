@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Montserrat, Geist_Mono, Uncial_Antiqua } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -70,10 +71,10 @@ export default function RootLayout({
         <footer className="p-4 bg-[var(--header-color)] text-white text-center w-full">
           <div className="mt-2">
             <a href="https://www.linkedin.com/in/oskarandre/" target="_blank">
-              <img src="/linkedin.svg" alt="LinkedIn" className="inline-block w-10 mr-5" />
+              <Image src="/linkedin.svg" alt="LinkedIn" className="inline-block w-10 mr-5" width={100} height={100} />
             </a>
             <a href="https://github.com/oskarandre/" target="_blank">
-              <img src="/github.svg" alt="GitHub" className="inline-block w-10" />
+              <Image src="/github.svg" alt="GitHub" className="inline-block w-10" width={100} height={100}/>
             </a>
           </div>
           <p className="text-xs text-black mt-2">OSKAR ANDRÈ &copy;2025</p>
