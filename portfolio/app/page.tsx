@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-16 p-8 sm:p-20">
       <section id="home" className="min-h-screen flex flex-col items-center justify-center">
-      <h2 className="text-4xl">Hello, I&apos;m Oskar.</h2>
+        <h2 className="text-4xl">Hello, I&apos;m Oskar.</h2>
         <p className="text-center max-w-2xl">
           Welcome to my portfolio. Here you can find information about my projects and skills.
         </p>

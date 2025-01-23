@@ -20,6 +20,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
@@ -42,4 +46,13 @@ header {
 footer {
   background-color: var(--foreground);
   color: var(--background);
+}
+
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
