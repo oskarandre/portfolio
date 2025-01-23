@@ -54,10 +54,10 @@ export default function RootLayout({
       >
         <header className="fixed top-0 left-0 right-0 p-4 bg-[var(--header-color)] text-white text-center z-50">
           <nav className="mt-2">
-            <a href="#home" onClick={(e) => handleClick("home")} className={`mx-2 hover:underline ${currentSection === "home" ? "text-[var(--secondary-color)]" : ""}`}>Home</a>
-            <a href="#about" onClick={(e) => handleClick("about")} className={`mx-2 hover:underline ${currentSection === "about" ? "text-[var(--secondary-color)]" : ""}`}>About</a>
-            <a href="#projects" onClick={(e) => handleClick("projects")} className={`mx-2 hover:underline ${currentSection === "projects" ? "text-[var(--secondary-color)]" : ""}`}>Projects</a>
-            <a href="#contact" onClick={(e) => handleClick("contact")} className={`mx-2 hover:underline ${currentSection === "contact" ? "text-[var(--secondary-color)]" : ""}`}>Contact</a>
+            <a href="#home" onClick={() => handleClick("home")} className={`mx-2 hover:underline ${currentSection === "home" ? "text-[var(--secondary-color)]" : ""}`}>Home</a>
+            <a href="#about" onClick={() => handleClick("about")} className={`mx-2 hover:underline ${currentSection === "about" ? "text-[var(--secondary-color)]" : ""}`}>About</a>
+            <a href="#projects" onClick={() => handleClick("projects")} className={`mx-2 hover:underline ${currentSection === "projects" ? "text-[var(--secondary-color)]" : ""}`}>Projects</a>
+            <a href="#contact" onClick={() => handleClick("contact")} className={`mx-2 hover:underline ${currentSection === "contact" ? "text-[var(--secondary-color)]" : ""}`}>Contact</a>
           </nav>
         </header>
         <main className="flex-grow pt-16">{children}</main>
