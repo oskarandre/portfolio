@@ -63,7 +63,7 @@ export default function RootLayout({
             <h1 className={`text-6xl ${uncialAntiqua.variable}`}>oa</h1>
           </div>
           <nav className="mt-2 flex ml-auto">
-            <a href="#projects" onClick={() => handleClick("projects")} className={`mx-2 hover:underline ${currentSection === "work" ? "text-[var(--secondary-color)]" : ""}`}>PROJECTS</a>
+            <a href="#project" onClick={() => handleClick("projects")} className={`mx-2 hover:underline ${currentSection === "projects" ? "text-[var(--secondary-color)]" : ""}`}>PROJECTS</a>
             <a href="#bio" onClick={() => handleClick("bio")} className={`mx-2 hover:underline ${currentSection === "bio" ? "text-[var(--secondary-color)]" : ""}`}>BIO</a>
           </nav>
         </header>

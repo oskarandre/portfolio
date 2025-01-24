@@ -1,8 +1,8 @@
-//import Image from "next/image";
+import { EmblaCarousel } from "./carousel";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-16 p-8 sm:p-20">
+    <div className="flex flex-col gap-16 p-8 sm:p-0">
       <section id="home" className="min-h-screen flex flex-col items-center justify-center">
         <h2 className="text-4xl">Hello, I&apos;m Oskar.</h2>
         <p className="text-center max-w-2xl">
@@ -15,11 +15,11 @@ export default function Home() {
         <p className="text-center max-w-2xl">
           Here are some of the projects I have worked on.
         </p>
-        {/* Add project details here */}  
+        <EmblaCarousel/>
       </section>
 
       <section id="bio" className="min-h-screen flex flex-col items-center justify-center">
-        <h2 className="text-4xl">Contact</h2>
+        <h2 className="text-4xl">BIO</h2>
         <p className="text-center max-w-2xl">
           Feel free to reach out to me through any of the following platforms.
         </p>
