@@ -58,13 +58,14 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="fixed top-0 font-medium left-0 right-0 p-4 bg-[var(--header-color)] text-black flex items-center justify-between z-50">
+        {/*backdrop-blur-sm backdrop-grayscale backdrop-contrast-150 backdrop-brightness-125  */}
+        <header className="fixed top-0 font-medium left-0 right-0 p-4 bg-[var(--header-color)] text-black flex items-center justify-between z-50 custom-backdrop ">
           <div className="absolute left-1/2 transform -translate-x-1/2">
-            <h1 className={`text-6xl ${uncialAntiqua.variable}`}>oa</h1>
+            <h1 className={`text-6xl ${uncialAntiqua.variable} logo-effect`}>oa</h1>
           </div>
           <nav className="mt-2 flex ml-auto">
-            <a href="#project" onClick={() => handleClick("projects")} className={`mx-2 hover:underline ${currentSection === "projects" ? "text-[var(--secondary-color)]" : ""}`}>PROJECTS</a>
-            <a href="#bio" onClick={() => handleClick("bio")} className={`mx-2 hover:underline ${currentSection === "bio" ? "text-[var(--secondary-color)]" : ""}`}>BIO</a>
+            <a href="#project" onClick={() => handleClick("projects")} className={`mx-2 ${currentSection === "projects" ? "text-[var(--secondary-color)]" : ""}`}>PROJECTS</a>
+            <a href="#bio" onClick={() => handleClick("bio")} className={`mx-2 ${currentSection === "bio" ? "text-[var(--secondary-color)]" : ""}`}>BIO</a>
           </nav>
         </header>
         <main className="flex-grow">{children}</main>
@@ -74,7 +75,7 @@ export default function RootLayout({
               <Image src="/linkedin.svg" alt="LinkedIn" className="inline-block w-10 mr-5" width={100} height={100} />
             </a>
             <a href="https://github.com/oskarandre/" target="_blank">
-              <Image src="/github.svg" alt="GitHub" className="inline-block w-10" width={100} height={100}/>
+              <Image src="/github.svg" alt="GitHub" className="inline-block w-10 " width={100} height={100}/>
             </a>
           </div>
           <p className="text-xs text-black mt-2">OSKAR ANDRÈ &copy;2025</p>

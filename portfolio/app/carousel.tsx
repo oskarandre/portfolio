@@ -15,6 +15,7 @@ type SlideType = {
     image: string
     title: string
     description: string
+    link: string
   }
 
 type PropType = {
@@ -64,32 +65,19 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   }, [emblaApi])
 
 
-  useEffect(() => {
-    console.log(isPlaying)
-    if (!isPlaying) {
-      const timer = setTimeout(() => {
-        const autoScroll = emblaApi?.plugins()?.autoScroll
-        if (autoScroll && !autoScroll.isPlaying()) {
-          autoScroll.play()
-        }
-      }, 20000) // 10 seconds
-
-      return () => clearTimeout(timer)
-    }
-  }, [isPlaying, emblaApi])
-
   return (
     <div className="embla relative w-full">
       <div className="embla__viewport overflow-hidden" ref={emblaRef}>
         <div className="embla__container flex">
-          {slides.map((slide,index) => (
+          {slides.map((slide, index) => (
             <div className="embla__slide relative min-w-full sm:min-w-[50%] flex-shrink-0" key={index}>
+              <a href={slide.link} target="" rel="noopener noreferrer">
                 <Image src={slide.image} alt={slide.title} width={500} height={500} className="w-full h-64 sm:h-96 object-cover" />
-                
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-                <h3 className="text-2xl">{slide.title}</h3>
-                <p>{slide.description}</p>
-              </div>
+                  <h3 className="text-2xl">{slide.title}</h3>
+                  <p>{slide.description}</p>
+                </div>
+              </a>
             </div>
           ))}
         </div>
@@ -106,13 +94,6 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           disabled={nextBtnDisabled}
           className="embla__button bg-gray-800 text-white p-2 rounded-full"
         />
-        {/* <button
-          className="embla__play bg-gray-800 text-white p-2 rounded-full"
-          onClick={toggleAutoplay}
-          type="button"
-        >
-          {isPlaying ? 'Stop' : 'Start'}
-        </button> */}
       </div>
     </div>
   )
