@@ -3,11 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --background: #000321;
+  /* --background: #000321;
   --foreground: #D0C8BD;
   --primary-color: #4472CA;
   --secondary-color: #F03A47;
-  --header-color: #00053D;
+  --header-color: #00053D; */
+  --background: #FFFFFF;
+  --foreground: #000321;
+  --primary-color: #4472CA;
+  --secondary-color: #F03A47;
+  --header-color: #00053d00;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -66,9 +71,15 @@ img {
 }
 
 img:hover {
+  cursor: pointer;
+}
+
+footer img:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
+
+
 
 .embla {
   overflow: hidden;

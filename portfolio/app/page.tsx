@@ -1,8 +1,31 @@
-import { EmblaCarousel } from "./carousel";
+import EmblaCarousel from "./carousel";
+import { EmblaOptionsType } from 'embla-carousel'
+
+const OPTIONS: EmblaOptionsType = { loop: true}
+const SLIDE_COUNT = 8
+const SLIDES = [
+  {
+    image: "/project1.png",
+    title: "Filmdle",
+    description: "A Wordle-inspired movie guessing game."
+  },
+  {
+    image: "/project2.png",
+    title: "Project 2",
+    description: "Description for project 2"
+  },
+  {
+    image: "/project3.png",
+    title: "Project 3",
+    description: "Description for project 3"
+  },
+  // Add more slides as needed
+]
 
 export default function Home() {
+  
   return (
-    <div className="flex flex-col gap-16 p-8 sm:p-0">
+    <div className="flex flex-col gap-16">
       <section id="home" className="min-h-screen flex flex-col items-center justify-center">
         <h2 className="text-4xl">Hello, I&apos;m Oskar.</h2>
         <p className="text-center max-w-2xl">
@@ -15,7 +38,7 @@ export default function Home() {
         <p className="text-center max-w-2xl">
           Here are some of the projects I have worked on.
         </p>
-        <EmblaCarousel/>
+        <EmblaCarousel slides={SLIDES} options={OPTIONS}/>
       </section>
 
       <section id="bio" className="min-h-screen flex flex-col items-center justify-center">
