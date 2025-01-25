@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useCallback, useEffect, useState } from 'react'
+import Image from 'next/image'
 import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
 import AutoScroll from 'embla-carousel-auto-scroll'
@@ -9,7 +10,6 @@ import {
   PrevButton,
   usePrevNextButtons
 } from './emblaCarouselArrowButtons'
-
 	
 type SlideType = {
     image: string
@@ -46,21 +46,11 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           ? autoScroll.reset
           : autoScroll.stop
 
-      resetOrStop()
-      callback()
+        resetOrStop()
+        callback()
     },
     [emblaApi]
   )
-
-  const toggleAutoplay = useCallback(() => {
-    const autoScroll = emblaApi?.plugins()?.autoScroll
-    if (!autoScroll) return
-
-    const playOrStop = autoScroll.isPlaying()
-      ? autoScroll.stop
-      : autoScroll.play
-    playOrStop()
-  }, [emblaApi])
 
   useEffect(() => {
     const autoScroll = emblaApi?.plugins()?.autoScroll
@@ -73,13 +63,28 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       .on('reInit', () => setIsPlaying(autoScroll.isPlaying()))
   }, [emblaApi])
 
+
+  useEffect(() => {
+    console.log(isPlaying)
+    if (!isPlaying) {
+      const timer = setTimeout(() => {
+        const autoScroll = emblaApi?.plugins()?.autoScroll
+        if (autoScroll && !autoScroll.isPlaying()) {
+          autoScroll.play()
+        }
+      }, 20000) // 10 seconds
+
+      return () => clearTimeout(timer)
+    }
+  }, [isPlaying, emblaApi])
+
   return (
     <div className="embla relative w-full">
       <div className="embla__viewport overflow-hidden" ref={emblaRef}>
         <div className="embla__container flex">
           {slides.map((slide,index) => (
             <div className="embla__slide relative min-w-full sm:min-w-[50%] flex-shrink-0" key={index}>
-                <img src={slide.image} alt={slide.title} className="w-full h-64 sm:h-96 object-cover" />
+                <Image src={slide.image} alt={slide.title} width={500} height={500} className="w-full h-64 sm:h-96 object-cover" />
                 
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
                 <h3 className="text-2xl">{slide.title}</h3>

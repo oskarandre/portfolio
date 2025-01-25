@@ -2,7 +2,6 @@ import EmblaCarousel from "./carousel";
 import { EmblaOptionsType } from 'embla-carousel'
 
 const OPTIONS: EmblaOptionsType = { loop: true}
-const SLIDE_COUNT = 8
 const SLIDES = [
   {
     image: "/project1.png",
