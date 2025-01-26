@@ -2,7 +2,7 @@
 
 import EmblaCarousel from "./carousel";
 import { EmblaOptionsType } from 'embla-carousel'
-import { useRouter } from 'next/navigation'
+//import { useRouter } from 'next/navigation'
 
 const OPTIONS: EmblaOptionsType = { loop: true}
 const SLIDES = [
@@ -27,7 +27,7 @@ const SLIDES = [
 ]
 
 export default function Home() {
-  const router = useRouter()
+  //const router = useRouter()
   
   return (
     <div className="flex flex-col "> 
