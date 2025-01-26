@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { Montserrat, Geist_Mono, Uncial_Antiqua } from "next/font/google";
 import Image from "next/image";
+import Link from 'next/link';
+
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -60,9 +62,9 @@ export default function RootLayout({
         {/*backdrop-blur-sm backdrop-grayscale backdrop-contrast-150 backdrop-brightness-125  */}
         <header className="fixed top-0 font-medium left-0 right-0 p-4 bg-[var(--header-color)] text-black flex items-center justify-between z-50 custom-backdrop ">
           <div className="absolute left-1/2 transform -translate-x-1/2">
-            <a href="/" className="flex items-center">
+          <Link href="/">
             <h1 className={`text-6xl ${uncialAntiqua.variable} logo-effect`}>oa</h1>
-            </a>
+          </Link>
           </div>
           <nav className="mt-2 flex ml-auto">
             <a href="#project" onClick={() => handleClick("projects")} className={`mx-2 ${currentSection === "projects" ? "text-[var(--secondary-color)]" : ""}`}>PROJECTS</a>
