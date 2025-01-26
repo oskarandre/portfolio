@@ -28,7 +28,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
     AutoScroll({ playOnInit: true})
   ])
-  const [isPlaying, setIsPlaying] = useState(false)
+  //const [isPlaying, setIsPlaying] = useState(false)
 
   const {
     prevBtnDisabled,
@@ -53,16 +53,16 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     [emblaApi]
   )
 
-  useEffect(() => {
-    const autoScroll = emblaApi?.plugins()?.autoScroll
-    if (!autoScroll) return
+//   useEffect(() => {
+//     const autoScroll = emblaApi?.plugins()?.autoScroll
+//     if (!autoScroll) return
 
-    setIsPlaying(autoScroll.isPlaying())
-    emblaApi
-      .on('autoScroll:play', () => setIsPlaying(true))
-      .on('autoScroll:stop', () => setIsPlaying(false))
-      .on('reInit', () => setIsPlaying(autoScroll.isPlaying()))
-  }, [emblaApi])
+//     setIsPlaying(autoScroll.isPlaying())
+//     emblaApi
+//       .on('autoScroll:play', () => setIsPlaying(true))
+//       .on('autoScroll:stop', () => setIsPlaying(false))
+//       .on('reInit', () => setIsPlaying(autoScroll.isPlaying()))
+//   }, [emblaApi])
 
 
   return (
