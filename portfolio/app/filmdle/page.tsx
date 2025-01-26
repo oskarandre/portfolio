@@ -27,16 +27,27 @@ export default function Filmdle() {
   }, []);
 
   return (
-    <div className="min-h-screen gap-16 flex flex-col items-center justify-center p-8 sm:p-0" >
-      <h2 className='text-4xl  mt-20 sm:mt-40'>Filmdle</h2>
-      <p className='text-center max-w-2xl'>A Wordle-inspired movie guessing game.</p>
-      <div className="project-gallery">
-        <img ref={(el) => { if (el) imagesRef.current.push(el); }} src="/project1.png" alt="Project 1" />
-        <img ref={(el) => { if (el) imagesRef.current.push(el); }} src="/project2.png" alt="Project 2" />
-        <img ref={(el) => { if (el) imagesRef.current.push(el); }} src="/project3.png" alt="Project 3" />
-        <img ref={(el) => { if (el) imagesRef.current.push(el); }} src="/project2.png" alt="Project 4" />
-      </div>
+    <div className="min-h-screen gap-16 flex flex-col items-center justify-center p-8 sm:p-0">
+      <h2 className='text-4xl mt-20 sm:mt-40'>Filmdle</h2>
       <Link href="/">Go back</Link>
+      <p className='text-center max-w-2xl'>A Wordle-inspired movie guessing game.</p>
+      <div className="project-gallery m-8 sm:m-32">
+        <div className="project-gallery-section">
+          <img className="drop-shadow-xl m-10" ref={(el) => { if (el) imagesRef.current.push(el); }} src="filmdleHome.png" alt="filmdleHome" />
+        </div>
+        <div className="project-gallery-section three-images">
+          <img className="drop-shadow-xl m-10 left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/filmdleLogin.png" alt="filmdleLogin" />
+          <div className="right-images">
+            <img className="drop-shadow-xl m-10" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/filmdleLogos.png" alt="filmdleLogo" />
+          </div>
+        </div>
+        <div className="project-gallery-section">
+          <img className="drop-shadow-xl m-10" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/FilmdleVid.gif" alt="FilmdleVid" />
+        </div>
+        <div className="project-gallery-section">
+          <img className="drop-shadow-xl m-10" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/filmdleArchive.png" alt="filmdleArchive" />
+        </div>
+      </div>
     </div>
   );
 }

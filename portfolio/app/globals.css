@@ -125,17 +125,26 @@ footer img:hover {
 }
 
 .project-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 16px;
   padding: 16px;
 }
 
+.project-gallery-section {
+  background-color: #f0f0f0;
+  padding: 32px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .project-gallery img {
-  width: 100%;
+  width: 80%;
   height: auto;
   display: block;
-  border-radius: 8px;
+  border-radius: 10px;
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0;
 }
@@ -143,5 +152,25 @@ footer img:hover {
 .project-gallery img.in-view {
   transform: scale(1.05);
   opacity: 1;
+}
+
+.project-gallery-section.three-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-gallery-section.three-images .left-image {
+  flex: 1;
+  margin-right: 16px;
+  width: 50%;
+}
+
+.project-gallery-section.three-images .right-images {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
 }
 

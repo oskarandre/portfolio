@@ -30,15 +30,12 @@ export default function Home() {
   const router = useRouter()
   
   return (
-    <div className="flex flex-col gap-16 "> 
+    <div className="flex flex-col "> 
       <section id="home" className="min-h-screen flex flex-col items-center justify-center p-8 sm:p-0">
         <h2 className="text-4xl">Hello, I&apos;m Oskar.</h2>
         <p className="text-center max-w-2xl">
           Welcome to my portfolio. Here you can find information about my projects and skills.
         </p>
-        <button type="button" onClick={() => router.push('/filmdle')}>
-        filmdle
-    </button>
       </section>
 
       <section id="projects" className="min-h-screen flex flex-col items-center justify-center">
