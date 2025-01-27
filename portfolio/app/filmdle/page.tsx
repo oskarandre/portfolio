@@ -27,26 +27,37 @@ export default function Filmdle() {
   }, []);
 
   return (
-    <div className="min-h-screen gap-16 flex flex-col items-center justify-center p-8 sm:p-0">
-      <h2 className='text-4xl mt-20 sm:mt-40'>Filmdle</h2>
-      <Link href="/">Go back</Link>
-      <p className='text-center max-w-2xl'>A Wordle-inspired movie guessing game.</p>
-      <div className="project-gallery m-8 sm:m-32">
+    <div className="min-h-screen gap-16 flex flex-col items-center justify-center m-0 md:m-16 lg:m-32">
+      
+      <div className="project-gallery">
+        <h2 className='text-4xl mt-32 md:mt-16 lg:mt-0'>Filmdle</h2>
+        {/* <Link href="/">X</Link> */}
+        <p className='text-center max-w-screen'>A Wordle-inspired movie guessing game
+          using the FERN stack (Firebase, Express,
+          Node.js, React).</p>
+        <Link href="https://filmdle.wtf" target="_blank" className="text-blue-500 underline font-bold">
+          Try Filmdle 
+        </Link>
         <div className="project-gallery-section">
-          <img className="drop-shadow-xl m-10" ref={(el) => { if (el) imagesRef.current.push(el); }} src="filmdleHome.png" alt="filmdleHome" />
+          <img className="drop-shadow-xl" ref={(el) => { if (el) imagesRef.current.push(el); }} src="filmdleHome.png" alt="filmdleHome" />
         </div>
-        <div className="project-gallery-section three-images">
-          <img className="drop-shadow-xl m-10 left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/filmdleLogin.png" alt="filmdleLogin" />
-          <div className="right-images">
-            <img className="drop-shadow-xl m-10" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/filmdleLogos.png" alt="filmdleLogo" />
-          </div>
-        </div>
-        <div className="project-gallery-section">
-          <img className="drop-shadow-xl m-10" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/FilmdleVid.gif" alt="FilmdleVid" />
+        <div className="project-gallery-section two-images">
+          <img className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/filmdleLogin.png" alt="filmdleLogin" />
+          <img className="drop-shadow-xl right-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/filmdleLogos.png" alt="filmdleLogo" />
+
         </div>
         <div className="project-gallery-section">
-          <img className="drop-shadow-xl m-10" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/filmdleArchive.png" alt="filmdleArchive" />
+          <img className="drop-shadow-xl" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/FilmdleVid.gif" alt="FilmdleVid" />
         </div>
+        <p className='text-center max-w-screen'>The user can guess the movie by typing in the title, and the app will give feedback on what features are in common with the secret movie.</p>
+        <div className="project-gallery-section">
+          <img className="drop-shadow-xl" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/filmdleArchive.png" alt="filmdleArchive" />
+        </div>
+        <p className='text-center max-w-screen'> Key features include user
+          authentication (login/signup), API integration
+          with database for movie search and suggestions, real-time data updates to Firebase, an
+          archive of past games, user statistics and interactive elements.
+          </p>
       </div>
     </div>
   );

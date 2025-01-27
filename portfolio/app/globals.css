@@ -3,11 +3,6 @@
 @tailwind utilities;
 
 :root {
-  /* --background: #000321;
-  --foreground: #D0C8BD;
-  --primary-color: #4472CA;
-  --secondary-color: #F03A47;
-  --header-color: #00053D; */
   --background: #FFFFFF;
   --foreground: #000321;
   --primary-color: #4472CA;
@@ -17,12 +12,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* --background: #000321;
-    --foreground: #FFFFFF;
-    --primary-color: #4472CA;
-    --secondary-color: #F03A47;
-    --header-color: #00053D; */
-
     --background: #FFFFFF;
     --foreground: #000321;
     --primary-color: #4472CA;
@@ -52,7 +41,6 @@ main {
 header {
   background-color: var(--header-color);
   color: var(--background);
-
 }
 
 header h1 {
@@ -98,10 +86,9 @@ footer img:hover {
   flex-shrink: 0;
 }
 
-
 @media (min-width: 640px) {
   .embla__slide {
-    min-width: 10%;
+    min-width: 50%;
   }
 }
 
@@ -121,31 +108,31 @@ footer img:hover {
 
 .custom-backdrop:hover::before {
   backdrop-filter: blur(15px) grayscale(50%) contrast(150%) brightness(125%);
-  
 }
 
 .project-gallery {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 16px;
   padding: 16px;
 }
 
 .project-gallery-section {
   background-color: #f0f0f0;
-  padding: 32px;
-  border-radius: 10px;
+  border-radius: 1vw;
+  padding: 5vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .project-gallery img {
-  width: 80%;
+  width: 100%;
   height: auto;
   display: block;
-  border-radius: 10px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 1vw;
+  transition: transform 0.5s ease, opacity 0.5s ease;
   opacity: 0;
 }
 
@@ -154,23 +141,20 @@ footer img:hover {
   opacity: 1;
 }
 
-.project-gallery-section.three-images {
+.project-gallery-section.two-images {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 4vw; /* Added gap between images */
 }
 
-.project-gallery-section.three-images .left-image {
+.project-gallery-section.two-images .left-image {
   flex: 1;
-  margin-right: 16px;
-  width: 50%;
+  width: 45%;
 }
 
-.project-gallery-section.three-images .right-images {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.project-gallery-section.two-images .right-image {
   flex: 1;
+  width: 45%;
 }
-
