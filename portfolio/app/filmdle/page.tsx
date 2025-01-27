@@ -12,8 +12,6 @@ export default function Filmdle() {
         const rect = img.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom > 0) {
           img.classList.add('in-view');
-        } else {
-          img.classList.remove('in-view');
         }
       });
     };
@@ -30,8 +28,7 @@ export default function Filmdle() {
     <div className="min-h-screen gap-16 flex flex-col items-center justify-center m-0 md:m-16 lg:m-32">
       
       <div className="project-gallery">
-        <h2 className='text-4xl mt-32 md:mt-16 lg:mt-0'>Filmdle</h2>
-        {/* <Link href="/">X</Link> */}
+        <h2 className='text-4xl mt-16 md:mt-8 lg:mt-0'>Filmdle</h2>
         <p className='text-center max-w-screen'>A Wordle-inspired movie guessing game
           using the FERN stack (Firebase, Express,
           Node.js, React).</p>
@@ -57,7 +54,7 @@ export default function Filmdle() {
           authentication (login/signup), API integration
           with database for movie search and suggestions, real-time data updates to Firebase, an
           archive of past games, user statistics and interactive elements.
-          </p>
+        </p>
       </div>
     </div>
   );

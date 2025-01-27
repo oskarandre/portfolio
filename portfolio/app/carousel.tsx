@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import Image from 'next/image';
 import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
@@ -55,11 +55,19 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
   const openOverlay = (slide: SlideType) => {
     setOverlay(slide);
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
   };
 
   const closeOverlay = () => {
     setOverlay(null);
+    document.body.style.overflow = 'auto'; // Restore scrolling
   };
+
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = 'auto'; // Ensure scrolling is restored on unmount
+    };
+  }, []);
 
   return (
     <div className="embla relative w-full">
@@ -68,7 +76,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           {slides.map((slide, index) => (
             <div className="embla__slide relative min-w-full sm:min-w-[50%] flex-shrink-0" key={index}>
               <div onClick={() => openOverlay(slide)} className="cursor-pointer">
-                <Image src={slide.image} alt={slide.title} width={500} height={500} className="w-full h-64 sm:h-96 object-cover" />
+                <Image src={slide.image} alt={slide.title} width={500} height={500} className="w-screen sm:w-full h-96 sm:h-fit object-cover" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
                   <h3 className="text-2xl">{slide.title}</h3>
                   <p>{slide.description}</p>
@@ -95,11 +103,12 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       {overlay && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50" onClick={closeOverlay}>
             <button onClick={closeOverlay} className="absolute top-2 right-5 text-white text-xl bg-black bg-opacity-50 p-2 rounded-full">
-              X
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </button>
           <div className="relative bg-white rounded-xl max-w-screen w-full h-full mt-32" onClick={(e) => e.stopPropagation()}>
-            
-            <iframe src={overlay.link} className="w-full h-full rounded-xl" />
+            <iframe src={overlay.link} className="w-full h-[calc(100vh-4rem)] rounded-xl border-none" />
           </div>
         </div>
       )}
