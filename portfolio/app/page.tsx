@@ -25,8 +25,8 @@ const SLIDES = [
   },
   {
     image: "/arFootball/arFootball.png",
-    title: "AR Football Dribbling Game",
-    description: "An interactive football dribbling game with a projected field.",
+    title: "AR Football Game",
+    description: "An interactive football game with a projected field.",
     link: "/arFootball"
   },
   {

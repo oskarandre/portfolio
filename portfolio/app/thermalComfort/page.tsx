@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from 'react';
+import Image from 'next/image';
 export default function Filmdle() {
   const imagesRef = useRef<HTMLImageElement[]>([]);
 
@@ -33,39 +34,34 @@ export default function Filmdle() {
         </p>
 
         <div className="project-gallery-section two-images">
-          <img className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="thermal/first.png" alt="thermalHome" />
-          <img className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="thermal/code.png" alt="thermalCode" />
-
+          <Image width={500} height={500} className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/thermal/first.png" alt="thermalHome" />
+          <Image width={500} height={500} className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/thermal/code.png" alt="thermalCode" />
         </div>
-
         <div className="project-gallery-section two-images">
-          <img className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="thermal/calendar.png" alt="thermalCalendar" />
-          <img className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="thermal/meny.png" alt="thermalmeny" />
-
+          <Image width={500} height={500} className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/thermal/calendar.png" alt="thermalCalendar" />
+          <Image width={500} height={500} className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/thermal/meny.png" alt="thermalmeny" />
         </div>
 
         <p className='text-center max-w-screen'>The app includes a calendar for logging thermal comfort data, and a menu for navigation.
         </p>
 
         <div className="project-gallery-section two-images">
-          <img className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="thermal/akt1.png" alt="thermalAkt1" />
-          <img className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="thermal/akt2.png" alt="thermalAkt2" />
-
+          <Image width={500} height={500} className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/thermal/akt1.png" alt="thermalAkt1" />
+          <Image width={500} height={500} className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/thermal/akt2.png" alt="thermalAkt2" />
         </div>
 
         <div className="project-gallery-section two-images">
-          <img className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="thermal/akt3.png" alt="thermalAkt3" />
-          <img className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="thermal/akt5.png" alt="thermalAkt5" />
-
+          <Image width={500} height={500} className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/thermal/akt3.png" alt="thermalAkt3" />
+          <Image width={500} height={500} className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/thermal/akt5.png" alt="thermalAkt5" />
         </div>
 
         <div className="project-gallery-section two-images">
-          <img className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="thermal/akt6.png" alt="thermalAkt6" />
-          <img className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="thermal/edit.png" alt="thermalEdit" />
-
+          <Image width={500} height={500} className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/thermal/akt6.png" alt="thermalAkt6" />
+          <Image width={500} height={500} className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/thermal/edit.png" alt="thermalEdit" />
         </div>
 
       </div>
     </div>
+    
   );
 }
