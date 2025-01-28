@@ -23,7 +23,7 @@ export default function Filmdle() {
   }, []);
 
   return (
-    <div className="min-h-screen gap-16 flex flex-col items-center justify-center m-0 md:m-16 lg:m-32">
+    <div className="min-h-screen gap-16 flex flex-col items-center justify-center m-0 md:m-16 lg:m-32 pb-16">
       <div className="project-gallery">
         <h2 className='text-4xl mt-16 md:mt-8 lg:mt-0'>AR Football</h2>
         <hr className="border-black w-80 lg:w-96" />
