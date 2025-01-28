@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useEffect, useRef } from 'react';
-import Link from 'next/link';
-
 export default function Filmdle() {
   const imagesRef = useRef<HTMLImageElement[]>([]);
 
