@@ -32,8 +32,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  overflow-x: hidden; /* Prevent sideways movement on mobile */
-  touch-action: pan-y; /* Prevent horizontal dragging */
 }
 
 main {
