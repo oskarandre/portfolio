@@ -78,7 +78,7 @@ export default function Home() {
           </Link>
         </div>
         <nav className="mt-2 flex ml-auto">
-          <a href="#project" onClick={() => handleClick("projects")} className={`mx-2 ${currentSection === "projects" ? "text-[var(--secondary-color)]" : ""}`}>PROJECTS</a>
+          <a href="#project" onClick={() => handleClick("projects")} className={`mx-2 ${currentSection === "projects" ? "text-[var(--secondary-color)]" : ""}`}>WORK</a>
           <a href="#bio" onClick={() => handleClick("bio")} className={`mx-2 ${currentSection === "bio" ? "text-[var(--secondary-color)]" : ""}`}>BIO</a>
         </nav>
       </header>
@@ -106,7 +106,8 @@ export default function Home() {
       <section id="bio" className="min-h-screen flex flex-col items-center justify-center p-8 sm:p-0">
         <h2 className="text-4xl">BIO</h2>
         <p className="text-center max-w-2xl">
-          Feel free to reach out to me through any of the following platforms.
+        I am a 5th-year student pursuing an M.Sc. in Media Technology and Engineering at Linköping University, Sweden. 
+        I have a strong passion for programming, design, 3D modeling, and AI. With a creative mindset and a technical foundation, I enjoy combining these skills to develop innovative solutions and explore new technologies.
         </p>
         {/* Add contact details here */}
       </section>
