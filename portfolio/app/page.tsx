@@ -24,9 +24,9 @@ const SLIDES = [
     link: "/filmdle"
   },
   {
-    image: "/project2.png",
-    title: "Project 2",
-    description: "Description for project 2",
+    image: "/arFootball.png",
+    title: "AR Football Dribbling Game",
+    description: "An interactive football dribbling game with a projected field.",
     link: "/project2"
   },
   {
