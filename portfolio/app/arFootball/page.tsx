@@ -54,7 +54,7 @@ export default function Filmdle() {
         </div>
 
         <p className='text-center max-w-screen'>The first version of app uses YOLOv8 for real-time object detection, tracking, and classification of footballs. 
-          However, the model's performance on a mid-range PC was too slow to support real-time tracking, making it impractical for live applications.
+          However, the model&apos;s performance on a mid-range PC was too slow to support real-time tracking, making it impractical for live applications.
         </p>
 
         <div className="project-gallery-section">
