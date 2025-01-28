@@ -36,19 +36,19 @@ export default function Filmdle() {
           Try Filmdle 
         </Link>
         <div className="project-gallery-section">
-          <img className="drop-shadow-xl" ref={(el) => { if (el) imagesRef.current.push(el); }} src="filmdleHome.png" alt="filmdleHome" />
+          <img className="drop-shadow-xl" ref={(el) => { if (el) imagesRef.current.push(el); }} src="filmdle/filmdleHome.png" alt="filmdleHome" />
         </div>
         <div className="project-gallery-section two-images">
-          <img className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/filmdleLogin.png" alt="filmdleLogin" />
-          <img className="drop-shadow-xl right-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/filmdleLogos.png" alt="filmdleLogo" />
+          <img className="drop-shadow-xl left-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="filmdle/filmdleLogin.png" alt="filmdleLogin" />
+          <img className="drop-shadow-xl right-image" ref={(el) => { if (el) imagesRef.current.push(el); }} src="filmdle/filmdleLogos.png" alt="filmdleLogo" />
 
         </div>
         <div className="project-gallery-section">
-          <img className="drop-shadow-xl" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/FilmdleVid.gif" alt="FilmdleVid" />
+          <img className="drop-shadow-xl" ref={(el) => { if (el) imagesRef.current.push(el); }} src="filmdle/FilmdleVid.gif" alt="FilmdleVid" />
         </div>
         <p className='text-center max-w-screen'>The user can guess the movie by typing in the title, and the app will give feedback on what features are in common with the secret movie.</p>
         <div className="project-gallery-section">
-          <img className="drop-shadow-xl" ref={(el) => { if (el) imagesRef.current.push(el); }} src="/filmdleArchive.png" alt="filmdleArchive" />
+          <img className="drop-shadow-xl" ref={(el) => { if (el) imagesRef.current.push(el); }} src="filmdle/filmdleArchive.png" alt="filmdleArchive" />
         </div>
         <p className='text-center max-w-screen'> Key features include user
           authentication (login/signup), API integration

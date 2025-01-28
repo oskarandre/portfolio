@@ -76,7 +76,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           {slides.map((slide, index) => (
             <div className="embla__slide relative min-w-full sm:min-w-[50%] flex-shrink-0" key={index}>
               <div onClick={() => openOverlay(slide)} className="cursor-pointer">
-                <Image src={slide.image} alt={slide.title} width={500} height={500} className="w-screen sm:w-full h-96 sm:h-fit object-cover" />
+                <Image src={slide.image} alt={slide.title} width={1000} height={1000} className="w-screen sm:w-full h-96 sm:h-fit object-cover" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
                   <h3 className="text-2xl">{slide.title}</h3>
                   <p>{slide.description}</p>

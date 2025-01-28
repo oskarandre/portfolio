@@ -18,16 +18,16 @@ const uncialAntiqua = Uncial_Antiqua({
 const OPTIONS: EmblaOptionsType = { loop: true}
 const SLIDES = [
   {
-    image: "/filmdleHome.png",
+    image: "/filmdle/filmdleHome.png",
     title: "Filmdle",
     description: "A Wordle-inspired movie guessing game.",
     link: "/filmdle"
   },
   {
-    image: "/arFootball.png",
+    image: "/arFootball/arFootball.png",
     title: "AR Football Dribbling Game",
     description: "An interactive football dribbling game with a projected field.",
-    link: "/project2"
+    link: "/arFootball"
   },
   {
     image: "/project3.png",
