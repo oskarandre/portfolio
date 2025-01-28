@@ -29,6 +29,8 @@ export default function Filmdle() {
       
       <div className="project-gallery">
         <h2 className='text-4xl mt-16 md:mt-8 lg:mt-0'>Filmdle</h2>
+        <hr className="border-black w-80 lg:w-96" />
+        <p className='text-center max-w-screen text-xs '>Date: Jan 2025</p>
         <p className='text-center max-w-screen'>A Wordle-inspired movie guessing game
           using the FERN stack (Firebase, Express,
           Node.js, React).</p>

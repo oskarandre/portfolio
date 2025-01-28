@@ -26,9 +26,10 @@ export default function Filmdle() {
 
   return (
     <div className="min-h-screen gap-16 flex flex-col items-center justify-center m-0 md:m-16 lg:m-32">
-      
       <div className="project-gallery">
         <h2 className='text-4xl mt-16 md:mt-8 lg:mt-0'>AR Football</h2>
+        <hr className="border-black w-80 lg:w-96" />
+        <p className='text-center max-w-screen text-xs '>Date: May 2024</p>
         <p className='text-center max-w-screen'> An interactive football dribbling game with a projected field,
           incorporating image recognition and motion tracking for real-time football detection.
           Built using Pyglet, YOLOv8, CVAT, and color
