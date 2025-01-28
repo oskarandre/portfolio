@@ -86,10 +86,12 @@ footer img:hover {
   flex-shrink: 0;
 }
 
+
 @media (min-width: 640px) {
   .embla__slide {
     min-width: 50%;
   }
+  
 }
 
 .custom-backdrop::before {

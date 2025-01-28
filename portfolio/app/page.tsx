@@ -1,6 +1,7 @@
 "use client";
 
 import EmblaCarousel from "./carousel";
+import EmblaCarouselArt from "./carouselArt";
 import { EmblaOptionsType } from 'embla-carousel'
 import Image from "next/image";
 import Link from 'next/link';
@@ -34,6 +35,63 @@ const SLIDES = [
     title: "Thermal Comfort App",
     description: "Application to log thermal comfort data.",
     link: "/thermalComfort"
+  },
+]
+
+const ART_SLIDES = [
+  {
+    image: "/art/porsche911.png",
+    title: "porsche911",
+    description: "",
+    link: ""
+  },
+  {
+    image: "/art/dotts.png",
+    title: "dotts",
+    description: "",
+    link: ""
+  },
+  {
+    image: "/art/glass.png",
+    title: "Stained Glass",
+    description: "",
+    link: ""
+  },
+  {
+    image: "/art/kamikaze.png",
+    title: "kamikaze",
+    description: "",
+    link: ""
+  },
+  {
+    image: "/art/kamikazePoster.jpg",
+    title: "kamikaze Poster",
+    description: "",
+    link: ""
+  },
+  {
+    image: "/art/festliuheter.png",
+    title: "festliuheter",
+    description: "",
+    link: ""
+  },
+  {
+    image: "/art/cards.png",
+    title: "EWB cards",
+    description: "",
+    link: ""
+  },
+  {
+    image: "/art/Lounge_area.png",
+    title: "EWN Lounge Area",
+    description: "",
+    link: ""
+  },
+  {
+    image: "/art/strand.png",
+    title: "strand",
+    description: "",
+    link: ""
   },
 ]
 
@@ -94,13 +152,16 @@ export default function Home() {
 
       <section id="projects" className="min-h-screen flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center p-8 sm:p-0">
-        <h2 className="text-4xl">Projects</h2>
-        <p className="text-center max-w-2xl">
-          Here are some of the projects I have worked on.
-        </p>
+        <h2 className="text-4xl mb-8">Projects</h2>
         </div>
         
         <EmblaCarousel slides={SLIDES} options={OPTIONS}/>
+      </section>
+
+      <section id="art" className="min-h-screen flex flex-col items-center justify-center p-8 sm:p-0">
+        <h2 className="text-4xl">Art</h2>
+        
+        <EmblaCarouselArt slides={ART_SLIDES} options={OPTIONS}/>
       </section>
 
       <section id="bio" className="min-h-screen flex flex-col items-center justify-center p-8 sm:p-0">
