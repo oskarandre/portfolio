@@ -30,10 +30,10 @@ const SLIDES = [
     link: "/arFootball"
   },
   {
-    image: "/project3.png",
-    title: "Project 3",
-    description: "Description for project 3",
-    link: "/project3"
+    image: "/thermal/thermalComfort.png",
+    title: "Thermal Comfort App",
+    description: "Application to log thermal comfort data.",
+    link: "/thermalComfort"
   },
 ]
 
