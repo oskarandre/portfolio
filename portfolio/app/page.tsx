@@ -4,7 +4,6 @@ import EmblaCarousel from "./carousel";
 import EmblaCarouselArt from "./carouselArt";
 import { EmblaOptionsType } from 'embla-carousel'
 import Image from "next/image";
-import Link from 'next/link';
 //import { useRouter } from 'next/navigation'
 import {Uncial_Antiqua } from "next/font/google";
 import { useEffect, useState } from "react";
