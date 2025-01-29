@@ -40,7 +40,7 @@ export default function Filmdle() {
         To improve relevance, we used data from 2014-2024, as national team compositions change over time. 
         We focused on UEFA Euro, Euro qualifications, FIFA World Cup, and friendlies for consistency. 
         Some factors like shots on target, possession, injuries, and fan activity were excluded due to data constraints. 
-        Teams were labeled as "home" and "away" for clarity, without implying actual home advantage.
+        Teams were labeled as &quot;home&quot; and &quot;away&quot; for clarity, without implying actual home advantage.
         </p>
 
         {/* <div className="project-gallery-section">
@@ -57,7 +57,7 @@ export default function Filmdle() {
         </p>
 
         <p className='text-center max-w-screen'>We predict goals for each team and use a Poisson distribution to simulate match results. 
-          This method underestimates draws, so we apply a 30% "draw boost" and normalize probabilities. 
+          This method underestimates draws, so we apply a 30% &quot;draw boost&quot; and normalize probabilities. 
           To improve draw predictions, we use a RandomForest model trained to detect high-probability draws. 
           If flagged, these matches are adjusted to reflect a higher likelihood of a draw.
         </p>
