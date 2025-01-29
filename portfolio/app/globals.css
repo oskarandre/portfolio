@@ -54,12 +54,31 @@ footer {
   color: var(--background);
 }
 
+section {
+  padding: 1rem;
+}
+
 img {
   transition: transform 0.3s ease;
 }
 
 img:hover {
   cursor: pointer;
+}
+
+.artImage:hover{
+  transform: scale(1.1);
+}
+
+button {
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 footer img:hover {

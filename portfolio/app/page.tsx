@@ -36,6 +36,19 @@ const SLIDES = [
     description: "Application to log thermal comfort data.",
     link: "/thermalComfort"
   },
+  {
+    image: "/reinforcementLearning/hockeyRe.png",
+    title: "AI Hockey Game",
+    description: "Deep Reinforcement Learning in a hockey game.",
+    link: "/reinforcementLearning"
+  },
+  {
+    image: "/sportsAnalytics/sportsAnalytics.png",
+    title: "UEFA Euro 2024 Simulations",
+    description: "Prediction model for the UEFA Euro 2024.",
+    link: "/sportsAnalytics"
+  },
+ 
 ]
 
 const ART_SLIDES = [
@@ -54,12 +67,6 @@ const ART_SLIDES = [
   {
     image: "/art/glass.png",
     title: "Stained Glass",
-    description: "",
-    link: ""
-  },
-  {
-    image: "/art/kamikaze.png",
-    title: "kamikaze",
     description: "",
     link: ""
   },
@@ -117,7 +124,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "projects", "art", "bio"];
+      const sections = ["home", "projects", "art", "bio", "contact"];
       const scrollPosition = window.scrollY + window.innerHeight / 2;
 
       for (const section of sections) {
@@ -138,26 +145,26 @@ export default function Home() {
     <>
       <header className="fixed top-0 font-medium left-0 right-0 p-4 bg-[var(--header-color)] text-black flex items-center justify-between z-50 custom-backdrop ">
         <div className="absolute left-1/2 transform -translate-x-1/2">
-          <Link href="/">
-            <h1 className={`text-6xl ${uncialAntiqua.variable} logo-effect`}>oa</h1>
-          </Link>
+          
+          <h1 className={`text-6xl ${uncialAntiqua.variable} logo-effect`} onClick={() => handleClick("home")}>oa</h1>
+          
         </div>
         <nav className="mt-2 flex ml-auto">
           <a href="#project" onClick={() => handleClick("projects")} className={`mx-2 ${currentSection === "projects" ? "text-[var(--secondary-color)]" : ""}`}>WORK</a>
-          <a href="#bio" onClick={() => handleClick("bio")} className={`mx-2 ${currentSection === "bio" ? "text-[var(--secondary-color)]" : ""}`}>BIO</a>
+          <a href="#contact" onClick={() => handleClick("contact")} className={`mx-2 ${currentSection === "contact" ? "text-[var(--secondary-color)]" : ""}`}>CONTACT</a>
         </nav>
       </header>
 
       <div className="flex flex-col "> 
     
       <section id="home" className="min-h-screen flex flex-col items-center justify-center p-8 sm:p-0">
-        <h2 className="text-4xl">Hello, I&apos;m <span className="text-[var(--secondary-color)]">Oskar</span>.</h2>
-        <p className="text-center max-w-2xl">
-          Welcome to my portfolio. Here you can find information about my projects and skills.
+        <h2 className="text-6xl">Hello, I&apos;m <span className="text-[var(--secondary-color)]">Oskar</span>.</h2>
+        <p className="text-center max-w-2xl text-2xl">
+        I am a 5th-year student pursuing an M.Sc. in Media Technology and Engineering.
         </p>
 
         <div className="mt-8">
-          <button onClick={() => handleClick("projects")} className="bg-[var(--secondary-color)] text-white px-4 py-2 rounded-lg">View Projects</button>
+          <button onClick={() => handleClick("projects")} className="bg-[var(--secondary-color)] text-white px-4 py-2 rounded-lg ">View My Work</button>
         </div>
 
         <div className="mt-8">
@@ -170,7 +177,7 @@ export default function Home() {
 
       <section id="projects" className="min-h-screen flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center p-8 sm:p-0">
-        <h2 className="text-4xl mb-8">Projects</h2>
+        <h2 className="text-4xl font-medium mb-8">PROJECTS</h2>
         </div>
         
         <EmblaCarousel slides={SLIDES} options={OPTIONS}/>
@@ -187,12 +194,12 @@ export default function Home() {
       </section>
 
       <section id="art" className="min-h-screen flex flex-col items-center justify-center p-8 sm:p-0">
-        <h2 className="text-4xl">Art</h2>
+        <h2 className="text-4xl mb-8 font-medium">ART</h2>
         
         <EmblaCarouselArt slides={ART_SLIDES} options={OPTIONS}/>
 
         <div className="mt-8">
-          <button onClick={() => handleClick("bio")} className="bg-[var(--secondary-color)] text-white px-4 py-2 rounded-lg">Bio</button>
+          <button onClick={() => handleClick("contact")} className="bg-[var(--secondary-color)] text-white px-4 py-2 rounded-lg">Contact</button>
         </div>
 
         <div className="mt-8">
@@ -202,16 +209,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="min-h-screen flex flex-col items-center justify-center p-8 sm:p-0">
-        <h2 className="text-4xl">BIO</h2>
-        <p className="text-center max-w-2xl">
-        I am a 5th-year student pursuing an M.Sc. in Media Technology and Engineering at Linköping University, Sweden. 
-        I have a strong passion for programming, design, 3D modeling, and AI. With a creative mindset and a technical foundation, I enjoy combining these skills to develop innovative solutions and explore new technologies.
-        </p>
-        {/* Add contact details here */}
+      <section id="contact" className="min-h-screen flex flex-col items-center justify-center p-8 sm:p-0">
+        <h2 className="text-4xl font-medium mb-4">CONTACT INFORMATION</h2>
+        <p className="text-center max-w-2xl mb-10">
+            Feel free to reach out to me via email or connect with me on LinkedIn.
+          </p>
+          
+          <div className="flex space-x-4">
+            <a href="mailto:oskarjandre@gmail.com" className="bg-[var(--secondary-color)] text-white px-4 py-2 rounded-lg">Email</a>
+            <a href="https://www.linkedin.com/in/oskarandre/" target="_blank" className="bg-[var(--secondary-color)] text-white px-4 py-2 rounded-lg">LinkedIn</a>
+            <a href="https://www.github.com/oskarandre" target="_blank" className="bg-[var(--secondary-color)] text-white px-4 py-2 rounded-lg">GitHub</a>
+          </div>
       </section>
 
-      <footer id="bio" className="p-4 bg-[var(--header-color)] text-white text-center w-full">
+      <footer  className="p-4 bg-[var(--header-color)] text-white text-center w-full">
           <div className="mt-2">
             <a href="https://www.linkedin.com/in/oskarandre/" target="_blank">
               <Image src="/linkedin.svg" alt="LinkedIn" className="inline-block w-10 mr-5" width={100} height={100} />

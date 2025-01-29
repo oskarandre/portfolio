@@ -104,7 +104,7 @@ const EmblaCarouselArt: React.FC<PropType> = (props) => {
           {slides.map((slide, index) => (
             <div className="art_slide flex items-center justify-center" key={index}>
               <div onClick={() => openOverlay(index)} className="cursor-pointer">
-                <Image src={slide.image} alt={slide.title} width={500} height={500} className="w-auto max-w-80 max-h-96 m-5" />
+                <Image src={slide.image} alt={slide.title} width={300} height={300} className="artImage w-auto max-w-80 max-h-96 m-5" />
               </div>
             </div>
           ))}
